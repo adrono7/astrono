@@ -27,6 +27,16 @@ h1 {
     text-transform: uppercase;
 }
 
+/* Dark Theme */
+.dark body {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
 /* nav styles */
 .hamburger {
   padding-right: 20px;
