@@ -1,3 +1,6 @@
+# v2 astro folder
+.astro
+
 # build output
 dist/
 

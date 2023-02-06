@@ -5,7 +5,7 @@ export async function get() {
     title: 'Astro Blog',
     description: 'My Astro journey',
     site: 'https://spontaneous-moonbeam-a0f0a7.netlify.app',
-    items: import.meta.glob('./**/*.md'),
+    items: await pagesGlobToRssItems(import.meta.glob('./blog/*.md')),
     customData: `<language>en-us</language>`,
   });
 }

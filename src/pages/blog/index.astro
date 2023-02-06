@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import HomeLayout from '../../layouts/HomeLayout.astro';
+const pageTitle = "Blog";
+const blogPosts = await getCollection("blog", ({ data }) => {
+    return !data.draft && data.date < new Date();
+});
+---
+<HomeLayout pageTitle={pageTitle}>
+<h1>{pageTitle}</h1>
+{
+    blogPosts.map(post => (
+        <h2>{post.data.title}</h2>
+        <p>{post.data.description}</p>
+        <a href={`/blog/${post.slug}/`}>Read post</a>
+    ))
+}
+
+</HomeLayout>

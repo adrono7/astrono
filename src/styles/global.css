@@ -1,102 +1,79 @@
-html {
-    background-color: #000;
-    font-family: sans-serif;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-  
+
 body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
-    line-height: 1.5;
-    color: #fff;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.5rem;
+  color: #fff;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  margin-inline: auto;
+  max-width: 80rem;
 }
   
-* {
-    box-sizing: border-box;
+
+a {
+  text-decoration: none;
+  color: white;
 }
-  
+
 h1 {
-    margin: 1rem 0;
-    font-size: 4rem;
-    color: yellow;
+
 }
 
 .skill {
-    color: green;
+    color: yellow;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-/* Dark Theme */
-.dark body {
-  background-color: #0d0950;
-  color: #fff;
-}
-
-.dark .nav-links a {
-  color: #fff;
-}
-
 /* nav styles */
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
+div.navigation {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
+div.navigation > svg {
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
-.nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
-  display: none;
-  margin: 0;
-}
-
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
+div.navigation > a {
   color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  float: right;
+  margin-top: 1rem;
+  margin-right: 15px;
 }
 
-.nav-links a:hover, a:focus {
-  background-color: yellow;
-  color: #000;
+div.navigation > a:nth-of-type(1) {
+  color: white;
+  text-decoration: none;
+  float: right;
+  margin-top: 1rem;
+  margin-right: 1rem;
 }
 
-.expanded {
-  display: unset;
+div.content {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
-@media screen and (min-width: 636px) {
-  .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-  }
+div.footer {
+  margin-top: auto;
+  background-color: hsl(0, 0%, 10%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
 
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
+div.footer > a {
+  padding-inline: 5px;
 }
