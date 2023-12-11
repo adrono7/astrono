@@ -2,20 +2,8 @@
 import { getCollection, getEntryBySlug } from "astro:content";
 import HomeLayout from '../layouts/HomeLayout.astro';
 const pageTitle = "Home Page";
-const blogPosts = await getCollection("blog", ({ data }) => {
-    return !data.draft && data.date < new Date();
-});
-const post1 = await getEntryBySlug("blog", "blog-1");
 ---
 <HomeLayout pageTitle={pageTitle}>
 <h1>{pageTitle}</h1>
-{post1.data.title}
-    {
-        blogPosts.map(post => (
-            <h2>{post.data.title}</h2>
-            <p>{post.data.description}</p>
-            <a href={`/blog/${post.slug}/`}>Read post</a>
-        ))
-    }
-
+<p>Welcome to astro.no.</p>
 </HomeLayout>
