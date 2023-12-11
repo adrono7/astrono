@@ -1,9 +1,9 @@
 ---
 title: My First Blog Post
 description: This is the first post of my new Astro blog.
-date: 2022-07-01
+date: 2015-08-17
 draft: false
-author: John Doe
+author: Adam
 ---
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
